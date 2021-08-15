@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::get('/', function () {;
+    auth()->user()->givePermissionsTo('delete poste', 'delete user');
 });
 
 Auth::routes();
