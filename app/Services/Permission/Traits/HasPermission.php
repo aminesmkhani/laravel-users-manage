@@ -24,9 +24,29 @@ trait HasPermission
         return $this;
     }
 
+    public function withdrawpermissions(... $permissions)
+    {
+        $permissions = $this->getAllPermissions($permissions);
+
+        $this->permissions()->detach($permissions);
+
+        return $this;
+
+    }
+
+    public function refreshPermissions(... $permissions)
+    {
+        $permissions = $this->getAllPermissions($permissions);
+
+        $this->permissions()->sync($permissions);
+
+        return $this;
+    }
+
     protected function getAllPermissions(array $permissions)
     {
         return Permission::whereIn('name', array_flatten($permissions))->get();
     }
+
 
 }
