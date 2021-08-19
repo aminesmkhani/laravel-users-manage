@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {;
-    auth()->user()->givePermissionsTo('delete poste', 'delete user');
+  dd(auth()->user()->hasPermission('add users'));
 });
 
 Auth::routes();
