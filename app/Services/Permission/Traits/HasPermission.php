@@ -43,10 +43,15 @@ trait HasPermission
         return $this;
     }
 
-    protected function getAllPermissions(array $permissions)
+    protected function getAllPermissions(... $permissions)
     {
         return Permission::whereIn('name', array_flatten($permissions))->get();
     }
 
+
+    public function hasPermission(Permission $permissions)
+    {
+        return $this->permissions->contains($permissions);
+    }
 
 }
