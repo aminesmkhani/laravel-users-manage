@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 
 
-// Route::get('/', function () {;
-//   dd(auth()->user()->hasPermission('add users'));
-// });
+ Route::get('/', function () {
+   auth()->user()->giveRolesTo('admin','writer');
+ });
 
 Auth::routes();
 
