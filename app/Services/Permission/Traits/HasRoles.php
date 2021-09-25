@@ -31,10 +31,18 @@ trait HasRoles
 
     public function withdrawRoles(... $roles)
     {
-        $roles =    $this->getAllRoles($roles);
+        $roles = $this->getAllRoles($roles);
 
         $this->roles()->detach($roles);
 
+        return $this;
+    }
+
+
+    public function refreshRoles(... $roles)
+    {
+        $roles = $this->getAllRoles($roles);
+        $this->roles()->sync($roles);
         return $this;
     }
 
