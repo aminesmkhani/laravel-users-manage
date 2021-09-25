@@ -29,4 +29,13 @@ trait HasRoles
       return Role::whereIn('name', Arr::flatten($roles))->get();
     }
 
+    public function withdrawRoles(... $roles)
+    {
+        $roles =    $this->getAllRoles($roles);
+
+        $this->roles()->detach($roles);
+
+        return $this;
+    }
+
 }
