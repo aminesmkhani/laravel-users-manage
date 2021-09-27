@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 
  Route::get('/', function () {
-   auth()->user()->withdrawRoles('admin','writer');
+//   auth()->user()->withdrawRoles('admin','writer');
+     dd(auth()->user()->hasRole('admsin'));
  });
 
 Auth::routes();

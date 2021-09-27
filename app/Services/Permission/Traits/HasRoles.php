@@ -46,4 +46,9 @@ trait HasRoles
         return $this;
     }
 
+    public function hasRole(string $role)
+    {
+        return $this->roles->contains('name', $role);
+    }
+
 }
