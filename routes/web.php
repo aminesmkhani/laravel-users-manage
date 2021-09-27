@@ -20,6 +20,10 @@ use Illuminate\Support\Facades\Route;
      return view('home');
  });
 
+ Route::get('/users', function (){
+    return view('users.list');
+ });
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
