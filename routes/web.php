@@ -17,10 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 
  Route::get('/', function () {
-
-    Role::find(1)->givePermissionsTo('delete users');
-    auth()->user()->giveRolesTo('admin');
-    dd(auth()->user()->can('delete users'));
+     return view('home');
  });
 
 Auth::routes();
