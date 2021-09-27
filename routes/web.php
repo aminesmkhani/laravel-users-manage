@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use App\Models\Role;
 use Illuminate\Support\Facades\Route;
 
@@ -20,9 +21,12 @@ use Illuminate\Support\Facades\Route;
      return view('home');
  });
 
- Route::get('/users', function (){
-    return view('users.list');
- });
+// Users
+
+Route::group(['prefix' => 'panel'], function (){
+    Route::get('/users', [UserController::class, 'index'])->name('users.index');
+});
+
 
 Auth::routes();
 
