@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Role;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,8 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 
  Route::get('/', function () {
-//   auth()->user()->withdrawRoles('admin','writer');
-     dd(auth()->user()->hasRole('admsin'));
+
+    Role::find(1)->givePermissionsTo('delete user');
+    auth()->user()->giveRolesTo('admin');
+    dd(auth()->user()->can('delete user'));
  });
 
 Auth::routes();

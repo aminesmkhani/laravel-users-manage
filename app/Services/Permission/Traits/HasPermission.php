@@ -55,4 +55,9 @@ trait HasPermission
         return $this->permissions->contains($permissions);
     }
 
+    protected function hasPermissionsThroughRole (Permission $permission)
+    {
+        dd($permission->roles);
+    }
+
 }
