@@ -117,7 +117,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="d-flex align-items-center" href="#">
+                <a class="d-flex align-items-center" href="{{route('users.index')}}">
                     <i data-feather="send"></i>
                     <span class="menu-title text-truncate" data-i18n="Home">لیست کاربران</span>
                 </a>
