@@ -1,5 +1,5 @@
 @extends('layouts.layouts')
-@section('title','Home')
+@section('title','لیست کاربران')
 @section('content')
   <div class="content-body">
       <div class="row" id="basic-table">

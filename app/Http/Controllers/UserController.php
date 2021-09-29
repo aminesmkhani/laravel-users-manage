@@ -12,4 +12,9 @@ class UserController extends Controller
         $users = User::with('roles')->get();
         return view('users.list', compact('users'));
     }
+
+    public function edit(User $user)
+    {
+        return view('users.edit');
+    }
 }
