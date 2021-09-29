@@ -149,6 +149,7 @@
             </div>
         </div>
         <div class="content-body">
+            @section('layouts.alerts')
             @yield('content')
         </div>
     </div>
