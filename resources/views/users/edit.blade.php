@@ -52,6 +52,7 @@
                     </div>
                 </div>
             </div>
+            <button type="submit" class="btn btn-success waves-effect waves-float waves-light">افزودن</button>
         </form>
 
     </section>
