@@ -24,7 +24,8 @@ use Illuminate\Support\Facades\Route;
 // Users
 
 Route::group(['prefix' => 'panel'], function (){
-    Route::get('/users', [UserController::class, 'index'])->name('users.index');
+    Route::get('users', [UserController::class, 'index'])->name('users.index');
+    Route::get('users/{user}/edit',[UserController::class, 'edit'])->name('users.edit');
 });
 
 
