@@ -149,7 +149,7 @@
             </div>
         </div>
         <div class="content-body">
-            @section('layouts.alerts')
+            @include('layouts.alerts')
             @yield('content')
         </div>
     </div>

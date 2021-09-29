@@ -16,7 +16,7 @@
                             <div class="demo-inline-spacing">
                                 @forelse($roles as $role)
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" name="roles[]" value="{{$role->name}}" id="{{'role' . $role->id}}">
+                                    <input class="form-check-input" type="checkbox" {{$user->roles->contains($role) ?    'checked' : ''}} name="roles[]" value="{{$role->name}}" id="{{'role' . $role->id}}">
                                     <label class="form-check-label" for="{{'role' . $role->id}}">{{$role->fa_name}}</label>
                                 </div>
                                 @empty
@@ -39,7 +39,7 @@
                             <div class="demo-inline-spacing">
                                 @forelse($permissions as $permission)
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" name="permissions[]" value="{{$permission->name}}" id="{{'permission' . $permission->id}}">
+                                        <input class="form-check-input" type="checkbox" name="permissions[]" {{$user->permissions->contains($permission) ?    'checked' : ''}} value="{{$permission->name}}" id="{{'permission' . $permission->id}}">
                                         <label class="form-check-label" for="{{'permission' . $permission->id}}">{{$permission->fa_name}}</label>
                                     </div>
                                 @empty
