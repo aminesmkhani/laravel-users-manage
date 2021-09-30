@@ -26,6 +26,7 @@ Route::group(['prefix' => 'panel'], function (){
     Route::get('users', [UserController::class, 'index'])->name('users.index');
     Route::get('users/{user}/edit',[UserController::class, 'edit'])->name('users.edit');
     Route::post('users/{user}/edit',[UserController::class, 'update'])->name('users.update');
+    Route::get('roles',[RoleController::class, 'index'])->name('roles.index');
 });
 
 
