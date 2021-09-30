@@ -17,12 +17,18 @@
                                       <div class="form-group">
                                           <label for="roleName">نام نقش</label>
                                           <input type="text" id="roleName" class="form-control" placeholder="نام نقش" name="name">
+                                          @if($errors->has('name'))
+                                            <small class="form-text text-danger">{{$errors->first('name')}}</small>
+                                          @endif
                                       </div>
                                   </div>
                                   <div class="col-md-3 col-4">
                                       <div class="form-group">
                                           <label for="roleNameFa">نام فارسی نقش</label>
                                           <input type="text" id="roleNameFa" class="form-control" placeholder="نام فارسی نقش" name="fa_name">
+                                          @if($errors->has('fa_name'))
+                                              <small class="form-text text-danger">{{$errors->first('fa_name')}}</small>
+                                          @endif
                                       </div>
                                   </div>
                                       <div class="form-group">

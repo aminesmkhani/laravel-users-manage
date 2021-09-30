@@ -16,6 +16,16 @@ class RoleController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+        $this->validateForm($request);
+
+    }
+
+
+    public function validateForm($request)
+    {
+        return $request->validate([
+           'name'   => ['required'],
+            'fa_name'   => ['required']
+        ]);
     }
 }
