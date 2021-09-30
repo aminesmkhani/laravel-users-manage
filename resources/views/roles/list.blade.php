@@ -10,19 +10,19 @@
                           <h4 class="card-title">افزودن نقش</h4>
                       </div>
                       <div class="card-body">
-                          <form class="form" method="POST">
+                          <form class="form" method="POST" action="{{route('roles.store')}}">
                               @csrf
                               <div class="row">
                                   <div class="col-md-3 col-4">
                                       <div class="form-group">
                                           <label for="roleName">نام نقش</label>
-                                          <input type="text" id="roleName" class="form-control" placeholder="نام نقش" name="roleName">
+                                          <input type="text" id="roleName" class="form-control" placeholder="نام نقش" name="name">
                                       </div>
                                   </div>
                                   <div class="col-md-3 col-4">
                                       <div class="form-group">
                                           <label for="roleNameFa">نام فارسی نقش</label>
-                                          <input type="text" id="roleNameFa" class="form-control" placeholder="نام فارسی نقش" name="roleNameFa">
+                                          <input type="text" id="roleNameFa" class="form-control" placeholder="نام فارسی نقش" name="fa_name">
                                       </div>
                                   </div>
                                       <div class="form-group">

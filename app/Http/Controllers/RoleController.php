@@ -12,4 +12,10 @@ class RoleController extends Controller
         $roles = Role::all();
         return view('roles.list',compact('roles'));
     }
+
+
+    public function store(Request $request)
+    {
+        dd($request->all());
+    }
 }
