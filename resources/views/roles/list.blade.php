@@ -2,15 +2,50 @@
 @section('title','لیست کاربران')
 @section('content')
   <div class="content-body">
+      <section id="multiple-column-form">
+          <div class="row">
+              <div class="col-12">
+                  <div class="card">
+                      <div class="card-header">
+                          <h4 class="card-title">افزودن نقش</h4>
+                      </div>
+                      <div class="card-body">
+                          <form class="form" method="POST">
+                              @csrf
+                              <div class="row">
+                                  <div class="col-md-3 col-4">
+                                      <div class="form-group">
+                                          <label for="roleName">نام نقش</label>
+                                          <input type="text" id="roleName" class="form-control" placeholder="نام نقش" name="roleName">
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3 col-4">
+                                      <div class="form-group">
+                                          <label for="roleNameFa">نام فارسی نقش</label>
+                                          <input type="text" id="roleNameFa" class="form-control" placeholder="نام فارسی نقش" name="roleNameFa">
+                                      </div>
+                                  </div>
+
+
+                                      <div class="form-group">
+                                          <button type="submit" class="btn btn-primary mr-1 waves-effect waves-float waves-light" style="margin-top: 20px">ثبت</button>
+                                      </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
       <div class="row" id="basic-table">
           <div class="col-12">
               <div class="card">
                   <div class="card-header">
-                      <h4 class="card-title">دسترسی ها</h4>
+                      <h4 class="card-title">لیست نقش ها</h4>
                   </div>
                   <div class="card-body">
                       <p class="card-text">
-                        لیست دسترسی های موجود در سیستم
+                        #
                       </p>
                   </div>
                   <div class="table-responsive">
