@@ -18,6 +18,9 @@ class RoleController extends Controller
     {
         $this->validateForm($request);
 
+        Role::create($request->only('name', 'fa_name'));
+
+        return back()->with('success', true);
     }
 
 
