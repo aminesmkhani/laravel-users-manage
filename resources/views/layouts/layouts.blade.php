@@ -122,6 +122,12 @@
                     <span class="menu-title text-truncate" data-i18n="Home">لیست کاربران</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="d-flex align-items-center" href="{{route('roles.index')}}">
+                    <i data-feather="layers"></i>
+                    <span class="menu-title text-truncate" data-i18n="Home">لیست دسترسی ها</span>
+                </a>
+            </li>
 
         </ul>
     </div>
