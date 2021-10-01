@@ -31,4 +31,9 @@ class RoleController extends Controller
             'fa_name'   => ['required']
         ]);
     }
+
+    public function edit(Request $request, Role $role)
+    {
+        dd($request->all());
+    }
 }
