@@ -43,6 +43,7 @@ class RoleController extends Controller
 
     public function update(Request $request, Role $role)
     {
+//        dd($request->all());
         $this->validateForm($request);
 
         $role->update($request->only('name', 'fa_name'));
