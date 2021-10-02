@@ -39,4 +39,16 @@ class RoleController extends Controller
         $role->load('permissions');
         return view('roles.edit', compact('permissions','role'));
     }
+
+
+    public function update(Request $request, Role $role)
+    {
+        $this->validateForm($request)
+
+        $role->update($request->only('name', 'fa_name'));
+
+        $role->refreshPermissions($request->permissions);
+
+        return back()->with('success', true);
+    }
 }
