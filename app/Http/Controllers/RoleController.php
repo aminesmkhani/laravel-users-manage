@@ -32,8 +32,8 @@ class RoleController extends Controller
         ]);
     }
 
-    public function edit(Request $request, Role $role)
+    public function edit(Role $role)
     {
-        dd($request->all());
+        dd($role);
     }
 }
