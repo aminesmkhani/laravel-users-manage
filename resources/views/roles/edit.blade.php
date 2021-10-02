@@ -2,7 +2,7 @@
 @section('title','لیست کاربران')
 @section('content')
     <div class="content-body">
-        <form class="form" method="POST" action="#">
+        <form class="form" method="POST" action="{{route('roles.update', $role->id)}}">
         <section id="multiple-column-form">
             <div class="row">
                 <div class="col-12">
