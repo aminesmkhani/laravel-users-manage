@@ -33,7 +33,7 @@ class PermissionServiceProvider extends ServiceProvider
         });
 
         Blade::if('role', function ($role){
-            auth()->check() && auth()->user()->hasRole($role);
+           return auth()->check() && auth()->user()->hasRole($role);
         });
     }
 
