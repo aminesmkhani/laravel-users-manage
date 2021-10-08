@@ -4,5 +4,57 @@
 
 # Laravel User Manage - Solid Coding
 
-### Coming Update .....
+### This Repo For Laravel ACL & ManageUsers Sample Code - SOLID Design
+
+# En
+
+## Example Page
+
+![Light Example](https://s4.uupload.ir/files/1_k9ua.jpg)
+
+### Users List
+
+![Light Example](https://s4.uupload.ir/files/2_1xpl.jpg)
+
+### Permission List
+
+![Light Example](https://s4.uupload.ir/files/3_cnz9.jpg)
+
+### User Role Edit
+
+![Light Example](https://s4.uupload.ir/files/4_gsd4.jpg)
+
+### Dark Mode 🌙
+
+![Light Example](https://s4.uupload.ir/files/5_n03r.jpg)
+
+
+
+# How Use 
+
+## Clone Project
+```
+Download Project 
+```
+
+## Project setup
+```
+Install Composer 
+```
+## Open Terminal or Cmd in Root Project
+```
+Navigate Project Terminal Or Cd :) 
+```
+### Compiles for development
+```
+Type Console : php artisan serve
+```
+
+### Work
+```
+Its Work !! Read Code For More Info
+```
+
+
+
 
